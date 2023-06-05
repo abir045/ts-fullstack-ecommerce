@@ -1,0 +1,23 @@
+import {useQuery } from '@tanstack/react-query'
+import { Product } from '../types/Product'
+import apiClient from '../apiClient'
+
+
+
+export const useGetProductsQuery = () => 
+
+// useQuery accepts a key and a function that returns a promise
+
+useQuery({
+      queryKey: ['products'] ,
+      queryFn: async () => ( await apiClient.get<Product[]>(`api/products`)).data,
+
+})
+
+export const useGetProductDetailsQuery = (slug: string) => 
+  useQuery({
+    queryKey: ['products', slug] ,
+    queryFn: async () =>  ( await apiClient.get<Product>(`api/products/${slug}`)).data,
+
+
+  })
