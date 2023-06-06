@@ -89,7 +89,7 @@ const Home = () => {
         </div>
 
          <div className='w-full'>
-             {sampleProducts.slice(0,1).map((product)=> (
+             {products?.slice(0,1).map((product)=> (
               <Link to={'/product/' + product.slug }>
               <img src={product.image.desktop}  /> 
               </Link>

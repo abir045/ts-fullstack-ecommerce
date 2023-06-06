@@ -6,7 +6,13 @@ export type Product =  {
         "mobile": string ;
         "tablet": string ;
         "desktop": string ;
+        "desktopProductPage": string ;
     }
+    includes: 
+        {
+        "quantity": number,
+        "item": string
+      }[],
     category: string
     brand: string
     price: number

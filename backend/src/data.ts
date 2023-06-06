@@ -4,13 +4,39 @@ export const sampleProducts: Product[] = [
 
     { 
         
-        slug: "xx99-mark-two-headphones",
-        name: "XX99 Mark II",
+        "slug": "xx99-mark-two-headphones",
+        "name": "XX99 Mark II",
         image: {
           mobile: "../images/mobile/image-xx99-mark-two-headphones.jpg",
           tablet: "../images/tablet/image-xx99-mark-two-headphones.jpg",
-          desktop: "../images/desktop/xx99-mark-two.jpg"
+          desktop: "../images/desktop/xx99-mark-two.jpg",
+          desktopProductPage: "../images/desktop/image-product.jpg",
+
         },
+      includes: [ 
+      {
+        quantity: 1,
+        "item": "Headphone unit"
+      },
+      {
+        "quantity": 2,
+        "item": "Replacement earcups"
+      },
+      {
+        "quantity": 1,
+        "item": "User manual"
+      },
+      {
+        "quantity": 1,
+        "item": "3.5mm 5m audio cable"
+      },
+      {
+        "quantity": 1,
+        "item": "Travel bag"
+      }
+    ],
+
+
         description: "The new XX99 Mark II headphones is the pinnacle of pristine audio.It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
          category : "headphones",
          brand: "xx99",

@@ -48,7 +48,7 @@ function App() {
        
       </main>
 
-      <footer>All rights reserved</footer>
+      <footer>Footer</footer>
         
     </div>
   )

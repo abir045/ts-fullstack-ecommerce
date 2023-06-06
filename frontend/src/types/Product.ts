@@ -6,6 +6,7 @@ export type Product =  {
         "mobile": string ;
         "tablet": string ;
         "desktop": string ;
+        "desktopProductPage": string ;
     } 
     category: string
     brand: string
