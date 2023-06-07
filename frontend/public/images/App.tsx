@@ -1,16 +1,13 @@
 import { Outlet } from 'react-router-dom'
 import cart from './assets/shared/desktop/icon-cart.svg'
 import logo from '../public/images/logo.svg'
-import facebook from  '../public/images/icon-facebook.svg' ;
-import twitter from  '../public/images/icon-twitter.svg' ;
-import  insta from  '../public/images/icon-instagram.svg' ;
 
 function App() {
   
 
   return (
     <div>
-      <header className="bg-[#0E0E0E] text-[#fff] h-[50px] flex flex-row items-center justify-around py-10"> 
+      <header className="bg-[#0E0E0E] text-[#fff] h-[50px] flex flex-row items-center justify-around"> 
        
     <img src={logo} alt="logo" />
 
@@ -33,7 +30,7 @@ function App() {
       
 
     </ul>
-    <li className='flex justify-end items-center'>
+    <li className='justify-end'>
         <img src={cart} alt="cart logo" />
       </li>
 
@@ -53,7 +50,7 @@ function App() {
       </main>
 
       <footer>
-        <div className='flex flex-col bg-[#101010] h-[365px] pt-[5%] text-[#ffffff]'>
+        <div className='flex flex-col bg-[#101010] h-[365px] pt-[5%]'>
           <div className='flex justify-between mx-[10%]'>
           
           <img src={logo} alt="logo" />
@@ -76,21 +73,19 @@ function App() {
     </ul>           
       </div>
       
-      <div className='flex flex-row mx-[10%] '>
+      <div className='flex'>
         <div className='flex flex-col'>
 
-        <p className='font-medium text-[15px] leading-[25px] opacity-50 mt-10 w-[50%]' >
+        <p className='font-medium text-[15px] leading-[25px] opacity-50'>
          Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.
         </p>
 
-        <span className='font-bold text-[15px] leading-[25px] opacity-50 mt-[5%]'>Copyright 2021. All Rights Reserved</span>
+        <span className='font-bold text-[15px] leading-[25px] opacity-50'>Copyright 2021. All Rights Reserved</span>
 
       </div>
 
-      <div className='flex flex-row space-x-5 justify-end mt-[10%]'>
-        <img className='w-[24px] h-[24px]' src={facebook} alt="facebook logo" />
-        <img className='w-[24px] h-[24px]' src={twitter} alt="twitter logo" />
-        <img className='w-[24px] h-[24px]' src={insta} alt="insta logo" />
+      <div className='flex'>
+        
         
         </div> 
 
