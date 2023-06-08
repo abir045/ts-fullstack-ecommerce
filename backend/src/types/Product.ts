@@ -21,5 +21,22 @@ export type Product =  {
     rating: number
     numReviews: number
     features: string
+    "gallery": {
+    first: {
+        mobile: string;
+        tablet: string;
+        desktop: string;
+    };
+    second: {
+        mobile: string;
+        tablet: string;
+        desktop: string;
+    };
+    third: {
+        mobile: string;
+        tablet: string;
+        desktop: string;
+    };
+}
 
 }
