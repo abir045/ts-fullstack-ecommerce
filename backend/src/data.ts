@@ -9,8 +9,8 @@ export const sampleProducts: Product[] = [
         image: {
           mobile: "../images/mobile/image-xx99-mark-two-headphones.jpg",
           tablet: "../images/tablet/image-xx99-mark-two-headphones.jpg",
-          desktop: "../images/desktop/xx99-mark-two.jpg",
-          desktopProductPage: "../images/desktop/image-product.jpg",
+          desktop: "../images/desktop/image-header.jpg",
+          desktopProductPage: "../images/shared/desktop/image-xx99-mark-two-headphones.jpg",
 
         },
       "includes": [ 
@@ -287,6 +287,7 @@ export const sampleProducts: Product[] = [
       {
         "quantity": 2,
         "item": "Replacement earcups"
+        
       },
       {
         "quantity": 1,

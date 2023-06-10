@@ -61,7 +61,7 @@ const Home = () => {
       <Helmet>
         <title> audiophile</title>
       </Helmet>
-      <div className='flex flex-row bg-[#0E0E0E]'>
+      <div className='flex flex-row  bg-[#0E0E0E]'>
          
          <div className='flex flex-col  space-y-5  my-[5%] mx-[10%] '>
           <h3 className='uppercase opacity-50 text-sm leading-[19px] tracking-[10px] text-[#fff]'>
@@ -88,10 +88,10 @@ const Home = () => {
         
         </div>
 
-         <div className='w-full'>
+         <div className='w-full '>
              {products?.slice(0,1).map((product)=> (
               <Link to={'/product/' + product.slug }>
-              <img src={product.image.desktop}  /> 
+              <img className='bg-transparent' src={product.image.desktop}  /> 
               </Link>
               
 

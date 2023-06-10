@@ -97,12 +97,18 @@ const  { data: products} = useGetProductsQuery()
       {/* other products */}
       <div className='flex flex-col mt-[10%]'>
 
-        <h1>You may also like</h1>
+        <h1 className='text-[32px] text-center leading-[36px] tracking-[1.142px] uppercase font-bold'>You may also like</h1>
        
        <div className='flex w-full space-x-5 mt-[5%]'>
              {products?.slice(2,5).map((product)=> (
               <Link to={'/product/' + product.slug }>
-              <img src={product.image.desktop}  /> 
+               <div className='flex flex-col my-5'>
+              <img src={product.image.desktop}  />
+              <h3 className='mt-10 text-[24px] text-center leading-[33px] uppercase tracking-[1.71429px] font-bold'>{product.name}</h3>
+
+              </div> 
+              
+
               </Link>
               
 

@@ -16,10 +16,8 @@ import ProductPage from './pages/ProductPage.tsx';
 import { HelmetProvider} from 'react-helmet-async'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { StoreProvider } from './Store.tsx'
 
-// axios.defaults.baseURL = 
-
-// process.env.NODE_ENV === 'development' ?  'http://localhost:4000' :  '/'
 
 
 const router = createBrowserRouter(
@@ -36,6 +34,7 @@ const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
+    <StoreProvider>
     <HelmetProvider>
      <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
@@ -43,6 +42,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
      </QueryClientProvider>
     
     </HelmetProvider>
-    
+    </StoreProvider>
   </React.StrictMode>,
 )
