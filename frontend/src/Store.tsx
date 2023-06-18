@@ -32,7 +32,7 @@ function reducer(state: AppState, action: Action) : AppState {
 const defaultDispatch: React.Dispatch<Action> =  () => initialState
 
 
-const Store = React.createContext({
+export const Store = React.createContext({
   state: initialState,
   dispatch: defaultDispatch
 })

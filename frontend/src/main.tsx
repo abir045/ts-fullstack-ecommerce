@@ -16,8 +16,9 @@ import ProductPage from './pages/ProductPage.tsx';
 import { HelmetProvider} from 'react-helmet-async'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { StoreProvider } from './Store.tsx'
-
+// import { StoreProvider } from './Store.tsx'
+import store from './app/store.ts';
+import { Provider } from 'react-redux';
 
 
 const router = createBrowserRouter(
@@ -34,14 +35,16 @@ const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <StoreProvider>
+    {/* <StoreProvider> */}
+    <Provider store ={store}>
     <HelmetProvider>
      <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
       <ReactQueryDevtools initialIsOpen={false} />
      </QueryClientProvider>
-    
     </HelmetProvider>
-    </StoreProvider>
+    </Provider>
+    
+    {/* </StoreProvider> */}
   </React.StrictMode>,
 )

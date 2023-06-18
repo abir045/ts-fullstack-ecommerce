@@ -4,13 +4,31 @@ import logo from '../public/images/logo.svg'
 import facebook from  '../public/images/icon-facebook.svg' ;
 import twitter from  '../public/images/icon-twitter.svg' ;
 import  insta from  '../public/images/icon-instagram.svg' ;
+import { useContext } from 'react';
+import { Store } from './Store';
+import DarkModeToggle from './components/DarkModeToggle';
+import { useAppDispatch, useAppSelector } from './app/hooks';
+import { toggleDarkMode } from './features/theme/themeSlice';
 
 function App() {
+  const isDarkMode = useAppSelector((state) => state.darkMode.isDarkMode )
+  // const dispatch = useAppDispatch()
+  // const {state, dispatch } = useContext(Store)
+  // const handleToggle = () => {
+  //       dispatch(toggleDarkMode())
+  //   }
   
 
   return (
-    <div>
-      <header className="bg-[#0E0E0E] text-[#fff] h-[50px] flex flex-row items-center justify-around py-10"> 
+       
+      
+    //  className={`App ${isDarkMode ? 'dark' : 'light'}` } 
+      
+      
+     <div className={`${isDarkMode ? 'dark-theme'  : 'light-theme'} `}>
+     
+      <header 
+      className="bg-[#0E0E0E]  text-[#fff] h-[50px] flex flex-row items-center justify-around py-10 dark:bg-[#000]"> 
        
     <img src={logo} alt="logo" />
 
@@ -28,6 +46,9 @@ function App() {
       <li>
         <a href="/earphones">Earphones</a>
       </li>
+       <li>
+         <DarkModeToggle />
+       </li>
 
 
       
@@ -52,7 +73,10 @@ function App() {
        
       </main>
 
-      <footer>
+
+      {/* footer */}
+
+      <footer >
         <div className='flex flex-col bg-[#101010] h-[365px] pt-[5%] text-[#ffffff]'>
           <div className='flex justify-between mx-[10%]'>
           
@@ -95,10 +119,6 @@ function App() {
         </div> 
 
       </div>
-
-      
-
-
 
         </div>
       </footer>
