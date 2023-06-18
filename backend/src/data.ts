@@ -7,10 +7,10 @@ export const sampleProducts: Product[] = [
         "slug": "xx99-mark-two-headphones",
         "name": "XX99 Mark II",
         image: {
-          mobile: "../images/mobile/image-xx99-mark-two-headphones.jpg",
-          tablet: "../images/tablet/image-xx99-mark-two-headphones.jpg",
-          desktop: "../images/desktop/image-header.jpg",
-          desktopProductPage: "../images/shared/desktop/image-xx99-mark-two-headphones.jpg",
+          mobile: '../images/mobile/image-xx99-mark-two-headphones.jpg',
+          tablet: '../images/tablet/image-xx99-mark-two-headphones.jpg',
+          desktop: '../images/desktop/image-header.jpg',
+          desktopProductPage: '../images/shared/desktop/image-xx99-mark-two-headphones.jpg',
 
         },
       "includes": [ 
@@ -274,7 +274,7 @@ export const sampleProducts: Product[] = [
       "desktop": "../images/product-xx59-headphones/desktop/image-product.jpg"
     },
     "category": "headphones",
-    
+    "brand": "xx59",
     "new": false,
     "price": 899,
     "description": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
