@@ -36,7 +36,7 @@ const  { data: products} = useGetProductsQuery()
        {/* image and details */}
       <div className='flex  mt-[5%] w-full'>
        <div className='flex w-full'>
-        <img className='w-full' src={product.image.desktopProductPage} />
+        <img className='w-full' src={product.image.desktop} />
        </div>
 
        <div className='flex flex-col px-[10%]  items-baseline mt-5 w-full'>
@@ -66,13 +66,13 @@ const  { data: products} = useGetProductsQuery()
      
      <div className='flex flex-col items-baseline w-full px-[10%] '>
        <h5 className='w-full text-[32px] font-bold leading-[36px] tracking-[1.142px] uppercase mb-5'>In the Box</h5>
-        {product.includes.map((item)=> {
+        {/* {product.includes.map((item)=> {
          return <div className='flex flex-row space-x-5 pt-2 '>
          <span className='text-[15px] leading-[25px] text-[#d87d4a] font-bold'>{item.quantity}x</span> 
          <p className='text-[15px] leading-[25px] opacity-50 font-medium '>{item.item}</p>
 
          </div>    
-       })}
+       })} */}
 
 
      </div>
@@ -82,7 +82,7 @@ const  { data: products} = useGetProductsQuery()
 
    {/* gallery images */}
       <div className='flex  mt-[10%]  space-x-5 '>
-      <div className='flex flex-col space-y-6'>
+      {/* <div className='flex flex-col space-y-6'>
         <img src={product.gallery.first.desktop} alt="gallery image 1" />
         <img src={product.gallery.second.desktop} alt="gallery image 2" />
 
@@ -90,7 +90,7 @@ const  { data: products} = useGetProductsQuery()
        
       <div className='flex'>
        <img src={product.gallery.third.desktop} alt="gallery image 3" />
-      </div>
+      </div> */}
 
       </div>
 
@@ -103,7 +103,7 @@ const  { data: products} = useGetProductsQuery()
              {products?.slice(2,5).map((product)=> (
               <Link to={'/product/' + product.slug }>
                <div className='flex flex-col my-5'>
-              <img src={product.image.desktop}  />
+              <img src={product.image.desktopProductPage}  />
               <h3 className='mt-10 text-[24px] text-center leading-[33px] uppercase tracking-[1.71429px] font-bold'>{product.name}</h3>
 
               </div> 
@@ -111,8 +111,6 @@ const  { data: products} = useGetProductsQuery()
 
               </Link>
               
-
-
              ))   
              
             }
@@ -121,11 +119,7 @@ const  { data: products} = useGetProductsQuery()
 
       </div>
 
-      
-      
-
-      
-      </div>
+    </div>
            
     )
     

@@ -15,8 +15,8 @@ export class Product{
   @prop({required: true, unique: true})
   public slug!: string
 
-  @prop({required: true})
-  public image!: object
+  @prop({required: true , type: ()=> Map })
+  public image!: Map<string,string>
 
 
 

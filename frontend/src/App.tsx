@@ -12,12 +12,6 @@ import { toggleDarkMode } from './features/theme/themeSlice';
 
 function App() {
   const isDarkMode = useAppSelector((state) => state.darkMode.isDarkMode )
-  // const dispatch = useAppDispatch()
-  // const {state, dispatch } = useContext(Store)
-  // const handleToggle = () => {
-  //       dispatch(toggleDarkMode())
-  //   }
-  
 
   return (
        
